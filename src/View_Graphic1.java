@@ -8,7 +8,7 @@ public class View_Graphic1 extends JFrame implements Beobachter
 	    /** erzeugt ein Graphikfenster */
     public View_Graphic1() {
 	        super("Graphic1");
-	        setBounds(100, 100, 1000, 1500);;
+	        setBounds(100, 50, 1000, 1500);;
 	        setVisible(true);
 	    }
 	    
@@ -18,6 +18,7 @@ public class View_Graphic1 extends JFrame implements Beobachter
 	       super.paint(g);
 	       Image coolschrank = new ImageIcon(this.getClass().getResource("/Coolschrank.jpg")).getImage();
 	        g.drawImage(coolschrank, 10, 10, 683, 982, this);
+	        
 	       
 	    }
 	    
