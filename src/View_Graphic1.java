@@ -3,11 +3,12 @@ import java.awt.*;
 public class View_Graphic1 extends JFrame implements Beobachter
 {
     
-    private Model model; 
+    private Model model;
+     
 	    /** erzeugt ein Graphikfenster */
     public View_Graphic1() {
 	        super("Graphic1");
-	        setBounds(100, 100, 300, 300);
+	        setBounds(100, 100, 1000, 1500);;
 	        setVisible(true);
 	    }
 	    
@@ -15,12 +16,8 @@ public class View_Graphic1 extends JFrame implements Beobachter
 	     */
 	    public void paint(Graphics g) {
 	       super.paint(g);
-	       
-	       
-	       
-	       
-	       
-	       
+	       Image coolschrank = new ImageIcon(this.getClass().getResource("/Coolschrank.jpg")).getImage();
+	        g.drawImage(coolschrank, 10, 10, 683, 982, this);
 	       
 	    }
 	    
