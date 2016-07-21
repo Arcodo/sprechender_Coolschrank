@@ -7,16 +7,12 @@ public class Model{
     //Beobachter (Views), die das Model hält
     private static ArrayList<Beobachter> beobachter;
     
-    private static View_Graphic1 v;
     
     /** erzeugt ein Objekt der Klasse Model */
-    public static void main(String[] args){
+    public void Model(){
         produkte = new Produkt[4];
         produkteEinfuegen();
-        beobachter = new ArrayList<Beobachter>();
-        v = new View_Graphic1();
-        beobachter.add(v);
-     }
+        }
             
     public static void produkteEinfuegen()
     {
