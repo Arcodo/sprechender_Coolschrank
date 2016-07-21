@@ -25,4 +25,8 @@ public class Produkt {
 		return maxAnzahl - menge;
 	}
 	
+	public void EinsEntfernen(){
+		menge = menge - 1;
+	}
+	
 }

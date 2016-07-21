@@ -16,7 +16,7 @@ public class Model{
         beobachter = new ArrayList<Beobachter>();
         v = new View_Graphic1();
         beobachter.add(v);
-    }
+     }
             
     public static void produkteEinfuegen()
     {
@@ -44,4 +44,15 @@ public class Model{
      public void BeobachterEntfernen(Beobachter b) {
          beobachter.remove(b);
     }
+     
+     public int getProduktzahl(int i){
+    	 return produkte[i].mengeAusgeben();
+     }
+     
+     public void ProduktEntfernen(int i){
+    	 produkte[i].EinsEntfernen();
+    	 this.BeobachterBenachrichtigen();
+     }
+     
+     
 }

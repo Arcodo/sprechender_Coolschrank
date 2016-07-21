@@ -10,14 +10,25 @@ public class Controler1 implements Controler
 	        this.model = model;
 	    }
 	    
-	    public void schalteZustand() {
-	        
-	        if (model.getZustand() == 1) {
-	            model.setZustand(0);
-	        } else {
-	            model.setZustand(1);
+	    public void ProduktNehmen(String s) {
+	    	if (s.equals("Milch nehmen"))
+	        {
+	            model.ProduktEntfernen(0);
 	        }
-	    }
+	    	if (s.equals("Butter nehmen"))
+	        {
+	            model.ProduktEntfernen(1);
+	        }
+	    	if (s.equals("Käse nehmen"))
+	        {
+	            model.ProduktEntfernen(2);
+	        }
+	    	else if (s.equals("Joghurt nehmen"))
+	        {
+	            model.ProduktEntfernen(3);
+	        }
+	        }
+	    
 	}
 
-}
+
