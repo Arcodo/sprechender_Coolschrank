@@ -8,7 +8,8 @@ public class Coolschrank {
 	public static void main(String[] args) {
 		m = new Model();
 		v = new View_Graphic1(m);
-		c =new Controler1(m);
+		m.BeobachterHinzufuegen(v);
+		c = new Controler1(m);
 		v.setControler(c);
 	}
 

@@ -2,10 +2,10 @@ import java.util.ArrayList;
 
 public class Model{
     //Daten, die das Model hält
-    private static Produkt[] produkte;
+    private Produkt[] produkte;
     
     //Beobachter (Views), die das Model hält
-    private static ArrayList<Beobachter> beobachter;
+    private ArrayList<Beobachter> beobachter;
     
     
     /** erzeugt ein Objekt der Klasse Model */
@@ -14,7 +14,7 @@ public class Model{
         produkteEinfuegen();
         }
             
-    public static void produkteEinfuegen()
+    public void produkteEinfuegen()
     {
     	produkte[0] = new Produkt(5, "Milch", 5);
     	produkte[1] = new Produkt(5, "Butter", 5);
