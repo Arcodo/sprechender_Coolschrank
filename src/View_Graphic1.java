@@ -13,49 +13,42 @@ public class View_Graphic1 extends JFrame implements Beobachter, ActionListener
     private JButton JButton2;
     private JButton JButton3;
     private JButton JButton4;
+    private JLabel Bild;
     private JLabel AusgabeLabel;
-    private JPanel AusgabePanel;
-
+    
      
 	    /** erzeugt ein Graphikfenster */
     public View_Graphic1(Model m) {
 	        super("Graphic1");
-	        setBounds(100, 0, 1200, 1000);;
+	        setBounds(100, 0, 1200, 1000);
+	        setVisible(true);
+	        
 	        model = m;
 	        
-	        kästen = new JToolBar();
 	        JButton1 = new JButton("Milch nehmen");
-	        JButton1.setBounds(0, 0, 100, 100);
-	        JButton1.setVisible(true);
+	        JButton1.setBounds(700, 20, 200, 60);
 	        
 	        JButton2 = new JButton("Butter nehmen");
-	        JButton2.setBounds(100, 0, 00, 100);
-	        JButton2.setVisible(true);
+	        JButton2.setBounds(950, 20, 200, 60);
 	        
             JButton3 = new JButton ("Käse nehmen");
+            JButton3.setBounds(700, 100, 200, 60);
+	        
+           
             JButton4 = new JButton ("Joghurt nehmen");
-            AusgabeLabel = new JLabel ("Ausgabe");
-            AusgabeLabel.setLocation(690, 100);
+            JButton4.setBounds(950, 100, 200, 60);
             
-            AusgabePanel = new JPanel();
-            AusgabePanel.setLocation(1000, 0);
-            AusgabePanel.setSize(317, 218);
-            AusgabePanel.add(JButton1);
-            AusgabePanel.add(JButton2);
-            AusgabePanel.add(JButton3);
-            AusgabePanel.add(JButton4);
-            AusgabePanel.add(AusgabeLabel);
-            AusgabePanel.setVisible(true);
             
-            getContentPane().add(kästen);
-            getContentPane().add(AusgabePanel);
+            AusgabeLabel = new JLabel ("AAAAAUUUUUUSSSSSGGGGAAAABBBEEEE");
+            AusgabeLabel.setBounds(700, 160, 300, 400);
+           
+            getContentPane().add(JButton1);
+            getContentPane().add(JButton2);
+            getContentPane().add(JButton3);
+            getContentPane().add(JButton4);
+            getContentPane().add(AusgabeLabel);
             
-    kästen.add(JButton1);
-    kästen.add(JButton2);
-    
-    setVisible(true);
-    
-}
+ }
 
 public void actionPerformed (ActionEvent event)
 {
@@ -70,8 +63,9 @@ public void actionPerformed (ActionEvent event)
 	     */
 	    public void paint(Graphics g) {
 	       super.paint(g);
-	       Image coolschrank = new ImageIcon(this.getClass().getResource("/Coolschrank.jpg")).getImage();
+	        Image coolschrank = new ImageIcon(this.getClass().getResource("/Coolschrank.jpg")).getImage();
 	        g.drawImage(coolschrank, 10, 10, 683, 982, this);
+	       
 	       }
 	    
 	    /** speichert die Referenz auf das aktuelle Model und fordert das Neuzeichnen des Fensters an*/
